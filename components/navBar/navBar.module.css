@@ -3,5 +3,15 @@
     font-family: 'Open Sans', sans-serif;
 }
 .positionFixed{
-    position: fixed;
+    position: fixed !important;
+    z-index: 999999;
+}
+.montserat{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.nonetext{
+    text-decoration:none !important;
+    color: black;
+    border: solid 1px red;
 }

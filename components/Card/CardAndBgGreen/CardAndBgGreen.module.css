@@ -5,3 +5,28 @@
 .openSans{
     font-family: 'Open Sans', sans-serif;
 }
+.montserat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+@media (max-width : 600px) {
+    .respensive {
+     display: flex;
+     flex-direction: column;
+     height: auto;
+    
+    }
+    .respensiveCard1{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+    }
+    .respensiveCard2{
+        display: flex;
+    justify-content:flex-end;
+        width: 100%; 
+    }
+}
