@@ -6,8 +6,8 @@ import About from "../../../assets/About.svg";
 const CardAbout = () => {
   return (
     <div>
-      <div className="pt-3  pb-5">
-        <div className="d-flex px-5 justify-content-end">
+      <div className="pt-3   pb-5">
+        <div className="d-flex px-5  justify-content-end">
           <div className={`col-2 pt-5`}>
             <Image src={cuate} height="" width="" />
           </div>
@@ -16,16 +16,29 @@ const CardAbout = () => {
       <div className="d-flex justify-content-center">
         <Title text="A propos de nous" />
       </div>
-      <div className="d-flex justify-content-center border">
-        <div>
+      <div className="d-flex  justify-content-around">
+        <div className="">
           <Image src={About} height="200" width="200" />
         </div>
-        <div>
+        <div className="d-flex align-items-center">
           <p>
-            Nous vous mettons en contact avec les meilleurs cabinets dentaire,
+            Nous vous mettons en contact avec les meilleurs cabinets dentaire, <br/>
             et cela vous permet de prendre rendez-vous sans vous deplacer
           </p>
         </div>
+      </div>
+
+      <div className="d-flex justify-content-center py-5">
+        <p>
+        Nous vous mettons en contact avec les meilleurs cabinets dentaire, <br/>
+            et cela vous permet de prendre rendez-vous sans vous deplacer
+        </p>
+      </div>
+      <div className="d-flex justify-content-end px-5 py-5">
+        <p>
+        Nous vous mettons en contact avec les meilleurs cabinets dentaire, <br/>
+            et cela vous permet de prendre rendez-vous sans vous deplacer
+        </p>
       </div>
     </div>
   );

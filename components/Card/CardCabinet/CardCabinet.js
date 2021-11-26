@@ -12,9 +12,9 @@ import Link from "next/link";
 const CardCabinet = () => {
   return (
     <div className="d-flex justify-content-center py-4 ">
-      <div className={`d-flex col-8 ${style.boxshadow}`}>
-        <div className="col-lg-8 border">
-          <div className="d-flex col-lg-12  py-3 px-3 justify-content-between">
+      <div className={`d-flex col-lg-8 ${style.boxshadow} ${style.respensiveReverse}`}>
+        <div className="col-lg-8 border-lg">
+          <div className={`d-flex col-lg-12  py-3 px-3 justify-content-between ${style.respensive}`}>
             <div className="col-lg-6">
               <h2>
                 Cabinet <br /> Kazadi Blaise
@@ -22,8 +22,7 @@ const CardCabinet = () => {
             </div>
 
             <div className="col-lg-6">
-                <Link href="/prendre_rendez_vous"><a className="text-decoration-none"><Button text="prendre rendez-vous" /></a>
-              {/*  */} 
+                <Link href="/prendre_rendez_vous"><a className={`text-decoration-none`}><Button text="prendre rendez-vous" className={`${style.fontSize}`}/></a>
               </Link>
             </div>
           </div>
@@ -59,7 +58,7 @@ const CardCabinet = () => {
 
         </div>
 
-        <div className="col-lg-4 border bg-light ">
+        <div className={`col-lg-4 bg-light   ${style.respensivemarginLefRight}`}>
           <Image src={cabinet} height="" width="" className="" />
         </div>
       </div>

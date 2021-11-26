@@ -9,16 +9,22 @@ import Button from "../../button/Button";
 const CardAndBgWhite = () => {
   return (
     <div className={` col-12 ${style.bgImage} `}>
-      <div className= {`d-flex ${style.respensive} `}>
+      <div className= {`d-flex ${style.respensiveReverse} `}>
+      <div className={`${style.respensiveCard2} col-6 col-md-6 col-sm-5 col-xs-6 d-flex align-items-start d-flex justify-content-center`}>
+          <div className="py-lg-5">
+            <Image className=" d-flex " src={doctors} height="" width="" />
+          </div>
+        </div>
+
         <div className={`col-6 col-md-6 col-sm-5 col-xs-6   d-flex  justify-content-center ${style.respensiveCard1}`}>
           <div className={`pt-4 pr-4 ${style.openSans}`}>
-            <div className={`lg-py-5  justify-content-center `}>
-              <h2 className={`fw-bold py-5  text-center ${style.colorgreen} ${style.montserat}`}>
+            <div className={`py-lg-5  justify-content-center `}>
+              <h2 className={`fw-bold py-lg-2  text-center ${style.colorgreen} ${style.montserat}`}>
                 Nous vous mettons en contact
               </h2>
 
               <div className=" ">
-                <p className={`px-5 col-12`}>
+                <p className={`px-lg-5 col-12 ${style.respensivepadding}`}>
                   nous mettons en contact avec les meilleurs dentistes du Congo
                   Nous vous mettons en contact avec les meilleurs dentistes du
                   Congo Nous vous mettons en contact avec les meilleurs
@@ -32,11 +38,7 @@ const CardAndBgWhite = () => {
           </div>
         </div>
 
-        <div className={`${style.respensiveCard2} col-6 col-md-6 col-sm-5 col-xs-6 d-flex align-items-start d-flex justify-content-center`}>
-          <div className="py-5">
-            <Image className=" d-flex " src={doctors} height="" width="" />
-          </div>
-        </div>
+        
       </div>
 
       <div>
@@ -44,7 +46,7 @@ const CardAndBgWhite = () => {
 
 
         <div className={`d-flex  ${style.respensive} justify-content-center`}>
-          <div className={` border  mx-4 pt-4 col-lg-2 col-md-2   ${style.boxshadow}`}>
+          <div className={` border  mx-4 pt-4 col-lg-2 col-md-1   ${style.boxshadow}`}>
               
               <div className="d-flex  justify-content-center ">
                   <div className={` ${style.cardheightAndWidth2}`}>

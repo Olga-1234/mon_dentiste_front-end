@@ -1,5 +1,6 @@
 import Head from "next/head"
 import CardAbout from "../components/Card/CardAbout/CardAbout"
+import Footer from "../components/footer/footer"
 import NavBar from "../components/navBar/navBar"
 
 const Apropos = () => {
@@ -36,6 +37,7 @@ const Apropos = () => {
       </Head>
 <NavBar/>
 <CardAbout/>
+<Footer/>
 
       
         </div>
