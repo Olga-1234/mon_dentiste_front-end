@@ -2,10 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
   "/trouver_un_dentiste": "pages/trouver_un_dentiste.js",
   "/prendre_rendez_vous": "pages/prendre_rendez_vous.js"
-=======
-  "/": "pages/index.js"
->>>>>>> 920b86479e63c7aa5db4672c5152433c34cff019
 }

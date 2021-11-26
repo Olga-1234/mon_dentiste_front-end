@@ -8,14 +8,14 @@ const CardAppointment=()=> {
     return (
         <div className="py-2  pb-5">
             <div className="d-flex justify-content-center   ">
-            <div className={`col-2 pt-5`}>
+            <div className={`col-lg-2 pt-5`}>
                 <Image src={rdvdoctor} height="" width="" />
             </div>
             </div>
 
 <div className="pt-2 d-flex justify-content-center">
-            <div className={`col-8 py-4 ${style.boxshadow} d-flex justify-content-center`}>
-            <form className=" col-8 row g-3 ">
+            <div className={`col-lg-8 py-4 ${style.boxshadow} d-flex justify-content-center`}>
+            <form className={`col-lg-8 row g-3 ${style.respensivepadding}`}>
                <h1 className="h4 d-flex justify-content-center"> Formulaire</h1> 
 
   <div className="col-md-12">
