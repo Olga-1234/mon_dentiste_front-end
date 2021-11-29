@@ -1,0 +1,4 @@
+export {
+    fetchArticle
+    }
+    from "./articleSplice"
