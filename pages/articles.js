@@ -3,7 +3,7 @@ import CardArticle from "../components/Card/CardArticle/CardArticle";
 import Footer from "../components/footer/footer";
 import NavBar from "../components/navBar/navBar";
 import Title from "../components/title/title";
-const articles = ({ratings = 3}) => {
+const articles = ({ratings = 1}) => {
 
     const ratingsArray = []
     for( let i=0; i < ratings; i++ ){

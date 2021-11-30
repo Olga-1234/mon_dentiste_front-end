@@ -14,7 +14,8 @@ const dispatch = useDispatch()
   useEffect (()=>
     dispatch(fetchArticle())
 
-  )
+  ,[]);
+  
   return (
     <div>
     {Articles.map((Article) => (
@@ -29,7 +30,7 @@ const dispatch = useDispatch()
           <p className="pt-1">
             {Article.description}
           </p>
-          <p className="pt-3 fw-bold">{Article.User.userName}</p>
+          <p className="pt-3 fw-bold"></p>
         </div>
       </div>
     </div>
