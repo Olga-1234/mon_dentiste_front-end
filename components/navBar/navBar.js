@@ -24,7 +24,6 @@ const NavBar=()=> {
         
       <ul className={`navbar-nav me-auto mb-lg-0 fw-bold ${style.montserat}`}>
         <li className="nav-item">
-
          <Link href="/"><a className="nav-link px-4">Accueil</a></Link>
         </li>
 
@@ -39,7 +38,7 @@ const NavBar=()=> {
         </li>
 
         <li className="px-4 nav-item">
-          <Button text= "connexion"/>
+          <Link href="/login"><Button text= "connexion"/></Link>
         </li> 
       </ul>
 

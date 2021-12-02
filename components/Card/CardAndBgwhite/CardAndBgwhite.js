@@ -46,7 +46,7 @@ const CardAndBgWhite = () => {
 
 
         <div className={`d-flex  ${style.respensive} justify-content-center`}>
-          <div className={` border  mx-4 pt-4 col-lg-2 col-md-1   ${style.boxshadow}`}>
+          <div className={` border  mx-4 pt-4 py-5  col-lg-2 col-md-1   ${style.boxshadow}`}>
               
               <div className="d-flex  justify-content-center ">
                   <div className={` ${style.cardheightAndWidth2}`}>
@@ -57,11 +57,11 @@ const CardAndBgWhite = () => {
     
                 <div>         
             <p className={` ${style.colorgreen} d-flex justify-content-center`}>Pour blanchir vos dents</p>
-            <p className="mx-2">bla bla bla  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+            <p className="mx-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s 
             </p>
             </div>
           </div>
-          <div className={` border mx-4  pt-4  col-lg-2 col-md-2 ${style.respensivemargin} ${style.boxshadow}`}>
+          <div className={` border mx-4   pt-4  col-lg-2 col-md-2 ${style.respensivemargin} ${style.boxshadow}`}>
               
               <div className="d-flex  justify-content-center ">
                   <div className={`  ${style.cardheightAndWidth2}`}>
@@ -70,9 +70,24 @@ const CardAndBgWhite = () => {
             </div>
               </div>
     
+                <div >         
+            <p className={` ${style.colorgreen} d-flex justify-content-center`}>Pour blanchir vos dents</p>
+            <p className="mx-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s 
+            </p>
+            </div>
+          </div>
+          <div className={` border  mx-4 pt-4 py-5  col-lg-2 col-md-1   ${style.boxshadow}`}>
+              
+              <div className="d-flex  justify-content-center ">
+                  <div className={` ${style.cardheightAndWidth2}`}>
+            <Image className={`d-flex  ${style.cardheightAndWidth2} `} src={dents} height="600" width="600" />
+                      
+            </div>
+              </div>
+    
                 <div>         
             <p className={` ${style.colorgreen} d-flex justify-content-center`}>Pour blanchir vos dents</p>
-            <p className="mx-2">bla bla bla  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+            <p className="mx-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s 
             </p>
             </div>
           </div>
@@ -87,7 +102,7 @@ const CardAndBgWhite = () => {
     
                 <div>         
             <p className={` ${style.colorgreen} d-flex justify-content-center`}>Pour blanchir vos dents</p>
-            <p className="mx-2">bla bla bla  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+            <p className="mx-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. 
             </p>
             </div>
           </div>

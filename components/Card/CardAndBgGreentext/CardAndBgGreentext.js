@@ -5,7 +5,7 @@ import style from "./CardAndBgGreentext.module.css"
 const CardAndBgGreentext=()=> {
     return (
         <div className={`col-12 py-4 ${style.bgImage} `}>   
-            <div className={`d-flex    ${style.montserat} text-light justify-content-center`}> 
+            <div className={`d-flex    ${style.montserat}  justify-content-center`}> 
                 <h2 className="fw-bold">Conseils</h2>
             </div>
             
