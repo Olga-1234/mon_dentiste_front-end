@@ -22,7 +22,7 @@ const dispatch = useDispatch()
 
     <div key={Article.id} className={`col-12 d-flex  pt-5 justify-content-center`}>
       <div className={`col-lg-9 border d-flex justify-content-center ${style.respensive}`}>
-          <Image src={enfantQuiBrosseDent} width="" height="" className={`col-lg-2  border border-danger py-xs-4`} />
+          <Image src={enfantQuiBrosseDent} width="" height="" className={`col-lg-2  border border-danger img-fluid py-xs-4`} />
         
         <div className="col-lg-10 py-2 px-3">
 
