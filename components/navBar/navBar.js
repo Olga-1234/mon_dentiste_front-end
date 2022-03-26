@@ -9,7 +9,7 @@ import Link from "next/link";
 const NavBar=()=> {
     return (
         <div className={`w-100  ${style.positionFixed}`}>
-             <nav className={`navbar-expand-lg bg-light col-12  navbar-light`}>
+             <nav className={`navbar-expand-lg  col-12  navbar-light`}>
    <div className="container-fluid">
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@ const NavBar=()=> {
         </li>
 
         <li className={`nav-item`}>
-			<Link   href="/trouver_un_dentiste"><a className="nav-link px-4">Trouver un dentiste</a></Link> 
+			<Link   href="/trouver_un_dentiste"><a className="nav-link px-4">Dentistes</a></Link> 
         </li>
         <li className="nav-item">
          <Link href="/articles"><a className="nav-link px-4">Articles</a></Link>

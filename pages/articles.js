@@ -3,19 +3,7 @@ import CardArticle from "../components/Card/CardArticle/CardArticle";
 import Footer from "../components/footer/footer";
 import NavBar from "../components/navBar/navBar";
 import Title from "../components/title/title";
-<<<<<<< HEAD
-const articles = ({ratings = 1}) => {
-
-    const ratingsArray = []
-    for( let i=0; i < ratings; i++ ){
-
-        ratingsArray.push(i)
-    }
-
-
-=======
 const articles = () => {
->>>>>>> feature/endpointofAppointment
   return (
     <div>
       <NavBar />

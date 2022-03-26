@@ -1,7 +1,7 @@
 import NavBar from "../components/navBar/navBar"
 import Head from 'next/head';
 import CardAppointment from "../components/Card/CardAppointment/CardAppointment";
-import CardAndBgGreentext from "../components/Card/CardAndBgGreentext/CardAndBgGreentext";
+import Advice from "../components/Office/CardOffice";
 import Footer from "../components/footer/footer";
 
 
@@ -12,7 +12,7 @@ const prendre_rendez_vous=()=> {
 
       <NavBar/>
       <CardAppointment/>
-      <CardAndBgGreentext/>
+      <Advice/>
       <Footer/>
         </div>
     )

@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
 import "bootstrap/dist/css/bootstrap.min.css";
-// import '../styles/globals.css'
+import '../styles/globals.css'
 import "bootstrap/dist/css/bootstrap.css";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
 import Head from "next/head";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -24,20 +25,12 @@ const MyApp = ({ Component, pageProps }) => {
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />;
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />;
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-          rel="stylesheet"
-        />
-        ;
-        <link rel="preconnect" href="https://fonts.googleapis.com" />;
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />;
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap"
-          rel="stylesheet"
-        />
-        ;
+ 
+      
+ <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
+        
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
           rel="stylesheet"
@@ -58,6 +51,7 @@ const MyApp = ({ Component, pageProps }) => {
           integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
           crossorigin="anonymous"
         ></script>
+        
         ;
         <script
           type="text/javascript"

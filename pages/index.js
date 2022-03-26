@@ -1,31 +1,27 @@
 /* eslint-disable no-unused-vars */
 
-import Head from 'next/head';
-import CardAndBg from '../components/Card/CardAndBgGreen/CardAndBgGreen';
-import CardAndBgGreentext from '../components/Card/CardAndBgGreentext/CardAndBgGreentext';
-import CardAndBgWhite from '../components/Card/CardAndBgwhite/CardAndBgwhite';
-import Footer from '../components/footer/footer';
-import NavBar from '../components/navBar/navBar'
+import Head from "next/head";
+import Carousel from "../components/Home/Carousel";
+import AboutUs from "../components/Home/AboutUs";
+import Footer from "../components/footer2";
+import Services from "../components/Home/service";
+import NavBar from "../components/navBar/navBar";
+import style from "../styles/style.module.css";
+import Advice from "../components/Home/Advice";
 
-
-
-
-const Home=()=> {
+const Home = () => {
   return (
-    <div className="" >
-   
-    
-     <NavBar/>
+    <div className={` ${style.scroll} `}>
+      <NavBar />
 
-<div className="pt-5 col-12">
-<CardAndBg className="col-12"/>
-</div>
-
-     <CardAndBgWhite/>
-     <CardAndBgGreentext />
-     <Footer/>
-
+      <div className="pt-5 col-12">
+        <Carousel className="col-12" />
+      </div>
+      <AboutUs />
+      <Services />
+      <Advice />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 export default Home;

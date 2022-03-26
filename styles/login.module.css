@@ -2,6 +2,9 @@
  
     height: 600px;
   }
+  .bglight{
+    background: #ffff;
+  }
   
   .input {
     margin-top: 200px;

@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/login": "pages/login.js"
+  "/trouver_un_dentiste": "pages/trouver_un_dentiste.js",
+  "/prendre_rendez_vous": "pages/prendre_rendez_vous.js"
 }

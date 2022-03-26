@@ -1,0 +1,35 @@
+.bgImage{
+    background-image: url(../../../assets/Rectangle15.jpg);
+
+}
+
+
+.width{
+    width: 200px !important;
+}
+
+
+.color{
+    color: #44B2A7 ;
+}
+
+
+@media (max-width : 600px) {
+    .respensive {
+     display: flex;
+     flex-direction: column;
+     height: auto;
+    
+    }
+    .respensiveCard1{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+    }
+    .respensiveCard2{
+        display: flex;
+    justify-content:flex-end;
+        width: 100%; 
+    }
+}
