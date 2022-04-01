@@ -1,10 +1,10 @@
 
 import style from "./Button.module.css"
 
-const Button=({text})=> {
+const Button=({text, type, onClick})=> {
     return (
        
-          <button className={`nav-link  fw-bold px-5 ${style.borderConnexion}`}>{text}</button>
+          <button type={type} onClick={onClick} className={`nav-link  fw-bold px-5 ${style.borderConnexion}`}>{text}</button>
        
     )
 }

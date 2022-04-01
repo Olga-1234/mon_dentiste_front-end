@@ -1,9 +1,7 @@
-
-import style from  "../styles/title.module.css"
-const  Title=({children})=> {
+const  Title=({text})=> {
     return (
         <div className={style.color}>
-           <h1>{children}</h1> 
+           <h1>{text}</h1> 
         </div>
     )
 }

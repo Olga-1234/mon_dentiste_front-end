@@ -1,30 +1,27 @@
 /* eslint-disable no-unused-vars */
 
-import Head from 'next/head';
-import CardAndBg from '../components/Card/CardAndBgGreen/CardAndBgGreen';
-import CardAndBgWhite from '../components/Card/CardAndBgwhite/CardAndBgwhite';
-import NavBar from '../components/navBar/navBar';
+import Head from "next/head";
+import Carousel from "../components/Home/Carousel";
+import AboutUs from "../components/Home/AboutUs";
+import Footer from "../components/footer";
+import Services from "../components/Home/service";
+import NavBar from "../components/navBar/navBar";
+import style from "../styles/style.module.css";
+import Advice from "../components/Home/Advice";
 
-
-
-const Home=()=> {
+const Home = () => {
   return (
-    <div className="">
-      <Head>
-        <title>Mon dentiste</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />;
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>;
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"/>
+    <div className={` ${style.scroll} `}>
+      <NavBar />
 
-      </Head>
-    
-     <NavBar className="position-fixed"/>
-     <CardAndBg/>
-     <CardAndBgWhite/>
-
+      <div className="pt-5 col-12">
+        <Carousel className="col-12" />
+      </div>
+      <AboutUs />
+      <Services />
+      <Advice />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 export default Home;
