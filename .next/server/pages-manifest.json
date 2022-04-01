@@ -3,5 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/trouver_un_dentiste": "pages/trouver_un_dentiste.js",
-  "/prendre_rendez_vous": "pages/prendre_rendez_vous.js"
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
+  "/": "pages/index.js"
 }
