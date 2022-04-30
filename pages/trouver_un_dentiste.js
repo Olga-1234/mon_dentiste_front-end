@@ -1,26 +1,28 @@
 /* eslint-disable no-unused-vars */
 import Head from "next/head";
-import CardCabinet from "../components/Card/CardCabinet/CardCabinet";
+import CardCabinet from "../components/Office/CardOffice";
 import Office from "../components/Office/CardOffice";
-import Footer from "../components/footer/footer";
+import Footer from "../components/footer";
 import NavBar from "../components/navBar/navBar";
-import Title from "../components/title/title";
+import Title from "../components/title";
 
-const trouver_un_dentiste = ({ ratings = 3 }) => {
-  const ratingArray = [];
-  for (let i = 0; i < ratings; i++) {
-    ratingArray.push(i);
-  }
+
+const trouver_un_dentiste = ({  }) => {
+
 
   return (
     <div>
       
       <NavBar />
-      <Office />
-      <Title className="d-flex justify-content-center" text="Les cabinets" />
-      {ratingArray.map((value) => (
-        <CardCabinet key={value} />
-      ))}
+      <div className="pt-5">
+
+      <Title className="d-flex pt-5 justify-content-center" text="Les Cabinets" />
+      </div>
+      <div className="container">
+      
+        <CardCabinet />
+      
+      </div>
 
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 import cuate from "../../../assets/cuate.png";
 import Image from "next/image";
-import Title from "../../title/title";
+import Title from "../../title";
 import About from "../../../assets/About.svg";
 
 const CardAbout = () => {

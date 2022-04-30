@@ -1,6 +1,6 @@
 import Head from "next/head"
 import CardAbout from "../components/Card/CardAbout/CardAbout"
-import Footer from "../components/footer/footer"
+import Footer from "../components/footer"
 import NavBar from "../components/navBar/navBar"
 
 const Apropos = () => {

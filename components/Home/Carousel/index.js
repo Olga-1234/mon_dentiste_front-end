@@ -3,7 +3,7 @@ import style from "./style.module.css";
 import carousel from "../../../assets/dasbord2.svg";
 import carousel2 from "../../../assets/bro.png";
 import carousel3 from "../../../assets/bro2.png";
-import Button from "../../button/Button";
+import Button from "../../button";
 import Link from "next/link";
 
 const Carousel = ({ className }) => {

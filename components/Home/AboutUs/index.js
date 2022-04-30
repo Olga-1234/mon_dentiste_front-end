@@ -4,7 +4,6 @@ import doctors from "../../../assets/dentiste.png";
 import dents from "../../../assets/dents.jpeg";
 import curedent from "../../../assets/curedent.jpeg"
 import deuxdents from "../../../assets/deuxdents.jpeg"
-import Button from "../../button/Button";
 
 const CardAndBgWhite = () => {
   return (

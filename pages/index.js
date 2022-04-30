@@ -3,11 +3,11 @@
 import Head from "next/head";
 import Carousel from "../components/Home/Carousel";
 import AboutUs from "../components/Home/AboutUs";
-import Footer from "../components/footer2";
+import Footer from "../components/footer";
 import Services from "../components/Home/service";
 import NavBar from "../components/navBar/navBar";
 import style from "../styles/style.module.css";
-import Advice from "../components/Home/Advice";
+import Advice from "../components/Advice";
 
 const Home = () => {
   return (

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import style from "./../styles/login.module.css";
 import eye from "../assets/eye.svg";
 import Image from "next/image";
-import Button from "../components/button/Button";
+import Button from "../components/button";
 import axios from "axios";
 import { useRouter } from "next/router";
 import dasbord from "../assets/dasbord2.svg";
@@ -20,6 +20,9 @@ const login = ({ email, passsword }) => {
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
+  const verifyExistenceOfItemInArray = (item, data) => {
+    return data.includes(item);
+  };
 
   const {
     register,
@@ -31,20 +34,27 @@ const login = ({ email, passsword }) => {
     console.log("les information sur la connexion", data);
     try {
       const token = await (
-        await axios.post("http://localhost:7000/api/auth/signIn", data)
+        await axios.post(
+          "https://mon-dentiste-ok.herokuapp.com/api/auth/signIn",
+          data
+        )
       ).data;
       console.log("les token", token.accessToken);
       console.log("les id", token.roles);
 
       localStorage.setItem("token", token.accessToken);
-      console.log("les information du login", data);
-
-      if (token.roles == "admin") {
-        router.push("/admin");
-      } else if (token.roles == "dentiste") {
+      localStorage.setItem("roles", token.roles);
+      if (
+        verifyExistenceOfItemInArray("dentiste", token.roles) &&
+        verifyExistenceOfItemInArray("admin", token.roles)
+      ) {
+        router.push("/AdminPage");
+      } else if (verifyExistenceOfItemInArray("admin", token.roles)) {
+        router.push("/AdminPage");
+      } else if (verifyExistenceOfItemInArray("dentiste", token.roles)) {
         router.push("/articles");
-      } else if (token.roles == "customer") {
-        router.push("/");
+      } else if (verifyExistenceOfItemInArray("customer", token.roles)) {
+        router.push("/AdminPage/rdv");
       }
     } catch (error) {
       console.log("erreur mauvais mot de passe :", error);
@@ -52,7 +62,7 @@ const login = ({ email, passsword }) => {
   };
   return (
     <div className="d-flex col">
-      <NavBar />
+      {/* <NavBar /> */}
       <div
         className={`d-flex col-6 justify-content-center align-items-center ${style.login}`}
       >
@@ -68,7 +78,7 @@ const login = ({ email, passsword }) => {
               name="email"
               placeholder="Email"
               className={` py-2 col-12  ${style.bordernone} `}
-              ref={register({ required: "This is required." })}
+              {...register("email", { required: true })}
             />{" "}
           </div>
 
@@ -80,7 +90,7 @@ const login = ({ email, passsword }) => {
               name="password"
               placeholder="mot de passe"
               className={` py-2 ${style.bordernone}  col-10 `}
-              ref={register({ required: "This is required." })}
+              {...register("password", { required: true })}
             />
             <i className="" onClick={togglePasswordVisiblity}>
               {Eye}
