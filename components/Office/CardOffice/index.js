@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCabinet } from "../../../redux";
 import { useEffect } from "react";
 
-const CardCabinet = () => {
+const CardCabinet = ({className}) => {
   const Cabinets = useSelector((state) => state.Cabinet.cabinets);
   console.log("les donnéées", Cabinets.name);
 
@@ -14,9 +14,9 @@ const CardCabinet = () => {
 
   useEffect(() => dispatch(fetchCabinet()), []);
   return (
-    <div>
+    <div className={className}>
       {Cabinets.map((Cabinet) => (
-        <div key={Cabinet.id} className="d-flex justify-content-center  my-5 ">
+        <div key={Cabinet.id} className="d-flex justify-content-center   my-5 ">
           <div
             className={`d-flex col-lg-12 justify-content-between ${style.boxshadow} ${style.respensiveReverse}`}
           >
@@ -33,18 +33,7 @@ const CardCabinet = () => {
                   <h2>{Cabinet.name}</h2>
                 </div>
 
-                <div className="col-lg-6">
-                  <Link href="/prendre_rendez_vous">
-                    <a className={`text-decoration-none`}>
-                      <p
-                        className={`${style.fontSize}`}
-                      >
-                        prendre rendez-vous
-
-                        </p>
-                    </a>
-                  </Link>
-                </div>
+          
               </div>
 
               <div className="d-flex px-3">
@@ -75,7 +64,17 @@ const CardCabinet = () => {
                 <i class="bi bi-envelope"></i>
                 <p className="px-3">{Cabinet.email}</p>
               </div>
+              <div className=" py-2 d-flex">
+                  <Link href="/prendre_rendez_vous">
+                    <a className={`text-decoration-none py-2 px-2 fw-bold ${style.fontSize} ${style.bdlink}`}>
+                 
+                        prendre rendez-vous
+
+                    </a>
+                  </Link>
+                </div>
             </div>
+
           </div>
         </div>
       ))}

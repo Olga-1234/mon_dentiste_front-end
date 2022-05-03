@@ -6,23 +6,17 @@ import Footer from "../components/footer";
 import NavBar from "../components/navBar/navBar";
 import Title from "../components/title";
 
-
-const trouver_un_dentiste = ({  }) => {
-
-
+const trouver_un_dentiste = ({}) => {
   return (
-    <div>
-      
+    <div className=''>
       <NavBar />
       <div className="pt-5">
-
-      <Title className="d-flex pt-5 justify-content-center" text="Les Cabinets" />
+        <Title
+          className="d-flex pt-5 justify-content-center"
+          text="Les Cabinets"
+        />
       </div>
-      <div className="container">
-      
-        <CardCabinet />
-      
-      </div>
+        <CardCabinet className="container " />
 
       <Footer />
     </div>

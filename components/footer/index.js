@@ -26,10 +26,10 @@ const Footer = () => {
       </div>
       <div className="col-12 col-md-2 ">
         <div className={`col-12  ${style.dflex} `}>
-          <i className={`bi bi-facebook d-block h3 d-flex justify-content-center  ${style.dNone} `}></i>
-          <i className={`bi bi-instagram d-block h3 d-flex justify-content-center ${style.dNone}`}></i>
-          <i className={`bi bi-twitter d-block h3 d-flex justify-content-center ${style.dNone}`}></i>
-          <i className={`bi bi-linkedin d-block h3 d-flex justify-content-center ${style.dNone}`}></i>
+          <i className={`bi bi-facebook d-block ${style.textrice} h3 d-flex  justify-content-center  ${style.dNone} `}></i>
+          <i className={`bi bi-instagram d-block h3 d-flex ${style.textrice} justify-content-center ${style.dNone}`}></i>
+          <i className={`bi bi-twitter d-block h3 d-flex ${style.textrice} justify-content-center ${style.dNone}`}></i>
+          <i className={`bi bi-linkedin d-block h3 d-flex ${style.textrice} justify-content-center ${style.dNone}`}></i>
         </div>
       </div>
     </footer>

@@ -16,23 +16,23 @@ const CardArticle = () => {
   );
 
   return (
-    <div>
+    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
       {Articles.map((Article) => (
         <div
           key={Article.id}
-          className={`col-12 d-flex  pt-5 justify-content-center`}
+          className={` d-flex  pt-5 justify-content-center`}
         >
           <div
             className={`col-lg-9 border d-flex justify-content-center ${style.respensive}`}
           >
             <Image
               src={Child}
-              width="100"
-              height="100"
-              className={`col-lg-2  border border-danger img-fluid py-xs-4`}
+              width=""
+              height=""
+              className={`col-lg-4  img-fluid py-xs-4`}
             />
 
-            <div className="col-lg-10 py-2 px-3">
+            <div className="col-lg-8 py-2 px-3">
               <h2>{Article.title}</h2>
               <p className="pt-1">{Article.description}</p>
               <p className="pt-3 fw-bold"></p>

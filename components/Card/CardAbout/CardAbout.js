@@ -1,12 +1,12 @@
 import cuate from "../../../assets/cuate.png";
 import Image from "next/image";
 import Title from "../../title";
-import About from "../../../assets/About.svg";
+import About from "../../../assets/About.png";
 
 const CardAbout = () => {
   return (
     <div>
-      <div className="pt-3   pb-5">
+      <div className="pt-3   ">
         <div className="d-flex px-5  justify-content-end">
           <div className={`col-2 pt-5`}>
             <Image src={cuate} height="" width="" />
