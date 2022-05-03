@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "babel next build src --out-dir dist",
+    "build": "next build",
     "test": "jest --coverage",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|json)\"",
     "format": "npm run prettier -- --write",
