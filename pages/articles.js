@@ -2,7 +2,7 @@ import Head from "next/head";
 import CardArticle from "../components/Card/CardArticle/CardArticle";
 import Footer from "../components/footer";
 import NavBar from "../components/navBar/navBar";
-import Title from "../components/title/title";
+import Title from "../components/title";
 const articles = () => {
   return (
     <div>

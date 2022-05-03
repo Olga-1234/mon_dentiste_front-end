@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 import Services from "../components/Home/service";
 import NavBar from "../components/navBar/navBar";
 import style from "../styles/style.module.css";
-import Advice from "../components/Home/Advice";
+import Advice from "../components/Advice";
 
 const Home = () => {
   return (

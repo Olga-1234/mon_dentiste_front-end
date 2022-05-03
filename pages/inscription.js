@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
-import Button from "../components/button/Button";
+import Button from "../components/button";
 import style from "../styles/inscription.module.css";
 import eye from "../assets/eye.svg";
 import Image from "next/image";
@@ -43,114 +43,101 @@ const inscription = () => {
   return (
       <div className={`py-5   d-flex align-items-center `}>
     <div className="d-flex py-5 justify-content-center ">
-      <form className={`col-lg-8 row g-4    ${style.respensivepadding}`}  onSubmit={handleSubmit(onSubmit)} >
-        <h1 className="h2 d-flex justify-content-center">
-          Formulaire d'inscription
-        </h1>
+    <form
+        className={`col-lg-8 row g-4  ${style.respensivepadding}`}
+        onSubmit={handleSubmit(onSubmit)}
+      >
 
         <div className="col-md-12">
-          <div className={`d-flex justify-content-between  `}>
-            <div className={`col-5 ${style.bordergreen} `}>
-            <input
-              type="text"
-              className={` col-12 px-3 py-2  ${style.bordernone} `}
-              id="inputname"
-              placeholder="Nom"
-              name="userName"
-          ref={register({ required: "This is required." })}/>{" "}
-</div>
-<div className={`col-5 ${style.bordergreen} `}>
-
-            <input
-              type="text"
-              className={` col-12 px-3 py-2 ${style.bordernone}`}
-              id="inputname"
-              placeholder="Prenom"
-              name="userfirstName"
-          ref={register({ required: "This is required." })}/>{" "}
-</div>
-            
-          </div>
+          <input
+            type="text"
+            className={`col-12 py-2 ${style.bordergreen}`}
+            id="inputuserName"
+            placeholder="Nom"
+            name="userName"
+            {...register("userName", { required: true })}
+          />
         </div>
-      <div className="d-flex col-md-12 justify-content-between">
-
-      <div className={`col-5 ${style.bordergreen} `}>
+        <div className="col-md-12">
+          <input
+            type="text"
+            className={`col-12 py-2 ${style.bordergreen}`}
+            id="inputuserfirstName"
+            placeholder="Prenom"
+            name="userfirstName"
+            // ref={register({ required: "This is required." })}
+            {...register("userfirstName", { required: true })}
+          />
+        </div>
+        <div className="col-md-12">
           <input
             type="email"
-            className={` col-12 px-3 py-2 ${style.bordernone}`}
-            id="inputEmail4"
-            placeholder="Email"
+            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            id="email"
+            placeholder="email"
             name="email"
-            ref={register({ required: "This is required." })}/>{" "}
-          
+            {...register("email", { required: true })}
+          />
         </div>
-        <div className={`col-md-5 d-flex ${style.bordergreen}`}>
-          <input
-   type={passwordShown ? "text" : "password"}
-            
-            className={` px-3 col-11 py-2 ${style.bordernone}`}
-            id="inputEmail4"
-            placeholder="Mot de passe"
-            name="password"
-            ref={register({ required: "This is required." })}/>{" "}
-             <i className="d-flex align-items-center" onClick={togglePasswordVisiblity}>
-            {Eye}
-          </i>{" "}
-          
-        </div>
-      </div>
 
-       <div className="d-flex col-md-12 justify-content-between">
-
-       <div className={`col-md-5 d-flex ${style.bordergreen}`}>
+        <div className="col-md-12">
           <input
-            type="address"
-            className={` col-12 px-3 py-2 ${style.bordernone}`}
-            id="inputEmail4"
+            type="text"
+            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            id="inputaddress"
             placeholder="Adresse"
             name="address"
-            ref={register({ required: "This is required." })}/>{" "}
-          
+            {...register("address", { required: false })}
+          />
         </div>
-        <div className={`col-md-5 ${style.bordergreen}`}>
+
+        <div className="col-md-12">
           <input
-            type="tel"
-            className={`col-12 px-3 py-2 ${style.bordernone}`}
-            id="inputEmail4"
-            placeholder="Téléphone"
-            name="tel"
-            ref={register({ required: "This is required." })}/>{" "}
-          
+            type="text"
+            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            id="sexe"
+            placeholder="sexe"
+            name="sexe"
+            {...register("sexe", { required: true })}
+          />
         </div>
-       </div>
-<div className={` d-flex justify-content-between `}>
-          <div className={`col-md-5  ${style.bordergreen} `}>
+        <div className="col-md-12">
           <input
             type="date"
-            className={` px-3 col-md-12 py-2 ${style.colorgrid}  ${style.bordernone}`}
-            id="date"
-            placeholder="Date"
+            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            id="birthdate"
+            placeholder="Date de Naissance"
             name="birthdate"
-            ref={register({ required: "This is required." })}/>{" "}
-          
-          </div>
-          <div className={`col-md-5  ${style.bordergreen} `}>
-    
-              <select
-                id="inputStat"
-                name="sexe"
-                ref={register({ required: "This is required." })}
-                className={`col-12 px-3 py-2 ${style.colorgrid} ${style.bglight}  ${style.bordernone}`}
-              >
-                <option selected>Genre</option>
-                <option value="homme">Homme</option>
-                <option value="femme">Femme</option>
+            {...register("birthdate", { required: true })}
+          />
+        </div>
+        <div className="col-md-12">
+          <input
+            type="number"
+            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            id="tel"
+            placeholder="Téléphone"
+            name="tel"
+            {...register("tel", { required: true })}
+          />
+        </div>
+  
 
-              </select>{" "}     
-              </div> 
-</div>
-        <div class="col-12 mt-5  d-flex justify-content-center">
-          <Button  text="Valider" />
+        
+        <div className="col-md-12">
+          <input
+            type="password"
+            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            id="password"
+            placeholder="mot de passe"
+            name="password"
+            {...register("password", { required: true })}
+          />
+        </div>
+        
+
+        <div class="col-12 d-flex justify-content-center">
+          <Button text="Envoyer" />
         </div>
       </form>
     </div>
