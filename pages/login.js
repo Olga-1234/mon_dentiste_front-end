@@ -44,6 +44,7 @@ const login = ({ email, passsword }) => {
 
       localStorage.setItem("token", token.accessToken);
       localStorage.setItem("roles", token.roles);
+
       if (
         verifyExistenceOfItemInArray("dentiste", token.roles) &&
         verifyExistenceOfItemInArray("admin", token.roles)

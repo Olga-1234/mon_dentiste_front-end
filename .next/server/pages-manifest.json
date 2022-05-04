@@ -1,17 +1,6 @@
 {
-  "/AdminPage/cabinet": "pages/AdminPage/cabinet.js",
-  "/AdminPage": "pages/AdminPage.js",
-  "/AdminPage/rdv": "pages/AdminPage/rdv.js",
-  "/AdminPage/utilisateur": "pages/AdminPage/utilisateur.js",
-  "/Details": "pages/Details.js",
   "/_app": "pages/_app.js",
-  "/a_propos_de_nous": "pages/a_propos_de_nous.js",
-  "/articles": "pages/articles.js",
-  "/": "pages/index.js",
-  "/inscription": "pages/inscription.js",
-  "/login": "pages/login.js",
-  "/prendre_rendez_vous": "pages/prendre_rendez_vous.js",
-  "/trouver_un_dentiste": "pages/trouver_un_dentiste.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js"
 }

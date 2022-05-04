@@ -1,14 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Dasbord = () => {
+  const [state, setState] = useState({});
+  useEffect(() => {
+    setState(JSON.parse(localStorage));
+  }, []);
   return (
     <div className="position-relative">
       <div
         className="d-flex flex-column position-fixed flex-shrink-0 p-3 text-white bg-dark"
         style={{ width: "280px", height: "100vh" }}
       >
-        {localStorage.roles.indexOf("admin") > -1 || (
+        {state.roles.indexOf("admin") > -1 || (
           <a
             href="/"
             className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
@@ -31,22 +36,16 @@ const Dasbord = () => {
             </a>
           </li>
           {localStorage.roles.indexOf("admin") > -1 && (
-
-          <li>
-            <Link href="/AdminPage/cabinet" passHref>
-              <a className="nav-link text-white">
-                Cabinet
-              </a>
-            </Link>
-          </li>
+            <li>
+              <Link href="/AdminPage/cabinet" passHref>
+                <a className="nav-link text-white">Cabinet</a>
+              </Link>
+            </li>
           )}
-
 
           <li>
             <Link href="/AdminPage/rdv" passHref>
-              <a className="nav-link text-white">
-                les Rendez-vous
-              </a>
+              <a className="nav-link text-white">les Rendez-vous</a>
             </Link>
           </li>
           {localStorage.roles.indexOf("admin") > -1 && (
