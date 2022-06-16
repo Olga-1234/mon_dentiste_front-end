@@ -9,6 +9,7 @@ import * as yup from "yup";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Layout from "../../../layout/layoutSideBar"
+import config from "../../../config/index"
 
 const SendUsers = () => {
   // const schema = yup
@@ -32,7 +33,7 @@ const SendUsers = () => {
     try {
       console.log(localStorage.getItem("token"), "hfuehv -fehvhrg ");
       const response = await axios
-        .post("https://mon-dentiste-ok.herokuapp.com/api/article", data, {
+        .post(`${config.api}/article`, data, {
           headers: {
             "x-access-token": `${localStorage.getItem("token")}`,
           },

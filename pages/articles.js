@@ -1,7 +1,7 @@
 import Head from "next/head";
-import CardArticle from "../components/Card/CardArticle/CardArticle";
+import CardArticle from "../components/Card/CardArticle";
 import Footer from "../components/footer";
-import NavBar from "../components/navBar/navBar";
+import NavBar from "../components/navBar";
 import Title from "../components/title";
 const articles = () => {
   return (

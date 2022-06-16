@@ -1,13 +1,14 @@
 /* eslint-disable no-unused-vars */
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import config from "../config/index"
 export const fetchCabinet = createAsyncThunk("Cabinet/fetch", async () => {
   try {
     // https://git.heroku.com/mon-dentiste.git
     // http://localhost:7000/api/article
     // https://git.heroku.com/mon-dentiste.git/api/article
     const response = await axios.get(
-      "https://mon-dentiste-ok.herokuapp.com/api/cabinet"
+      `${config.api}/cabinet`
     );
     const data = await response.data;
     return data;

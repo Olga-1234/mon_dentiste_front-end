@@ -4,6 +4,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 import axios from "axios";
+import config from "../config/index"
 export const loginAsync = createAsyncThunk(
   "loginAsync/fetch",
 
@@ -15,7 +16,7 @@ export const loginAsync = createAsyncThunk(
       console.log("le token", data)
     try {
      const response = await axios.post(
-      "http://localhost:7000/api/auth/signIn",
+      `${config.api}/auth/signIn`,
       data, { headers: {"Authorization" : `Bearer ${token}`}}
     )
 

@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import * as yup from "yup";
 import { useRouter } from "next/router";
 import axios from "axios";
+import config from "../../../config/index"
 
 const SendArticle = () => {
 ;
@@ -25,7 +26,7 @@ const SendArticle = () => {
       console.log(data.picture)
       const response = await axios
         .post(
-          "https://mon-dentiste-ok.herokuapp.com/api/article",
+          `${config.api}/article`,
           { ...data,picture: "fufutfut" },
           {
             headers: {

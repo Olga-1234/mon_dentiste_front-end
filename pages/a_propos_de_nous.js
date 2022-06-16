@@ -1,7 +1,7 @@
 import Head from "next/head";
-import CardAbout from "../components/Card/CardAbout/CardAbout";
+import CardAbout from "../components/Card/CardAbout";
 import Footer from "../components/footer";
-import NavBar from "../components/navBar/navBar";
+import NavBar from "../components/navBar";
 
 const Apropos = () => {
   return (

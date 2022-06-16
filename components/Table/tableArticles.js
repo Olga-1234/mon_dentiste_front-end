@@ -5,6 +5,8 @@ import { useEffect } from "react";
 const TableArticles = () => {
   const Articles = useSelector((state) => state.Article.articles);
   const dispatch = useDispatch();
+  console.log('les articles', Articles.title)
+
 
   useEffect(
     () => dispatch(fetchArticle()),

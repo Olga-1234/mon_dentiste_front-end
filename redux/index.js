@@ -1,20 +1,9 @@
-export {
-    fetchArticle
-    }from "./articleSplice"
+export { fetchArticle } from "./articleSplice";
 
+export { loginAsync } from "./loginSplice";
 
-export
-    {
-        loginAsync
+export { fetchCabinet } from "./cabinetSplice";
 
-    }from "./loginSplice"
-
-    export {
-fetchCabinet
-    }from "./cabinetSplice"
-
-    export {
-        fetchUser
-            }from "./userSlice"
-        
+export { fetchUser } from "./userSplice";
+export { fetchAppointment } from "./appointmentSplice";
 

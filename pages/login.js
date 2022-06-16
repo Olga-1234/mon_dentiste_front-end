@@ -7,8 +7,10 @@ import Button from "../components/button";
 import axios from "axios";
 import { useRouter } from "next/router";
 import dasbord from "../assets/dasbord2.svg";
-import NavBar from "../components/navBar/navBar";
+import NavBar from "../components/navBar";
 import Link from "next/link";
+import Goback from "../components/Goback";
+import config from "../config/index"
 
 const Eye = <Image src={eye} width="" height="" />;
 
@@ -35,7 +37,7 @@ const login = ({ email, passsword }) => {
     try {
       const token = await (
         await axios.post(
-          "https://mon-dentiste-ok.herokuapp.com/api/auth/signIn",
+          `${config.api}/auth/signIn`,
           data
         )
       ).data;
@@ -43,7 +45,9 @@ const login = ({ email, passsword }) => {
       console.log("les id", token.roles);
 
       localStorage.setItem("token", token.accessToken);
-      localStorage.setItem("roles", token.roles);
+      localStorage.setItem("roles", token.roles.join(","));
+
+      // console.log("le test :", JSON.parse(localStorage.getItem("roles")));
 
       if (
         verifyExistenceOfItemInArray("dentiste", token.roles) &&
@@ -67,10 +71,13 @@ const login = ({ email, passsword }) => {
       <div
         className={`d-flex col-6 justify-content-center align-items-center ${style.login}`}
       >
+
         <form
           className={`col-lg-7 row g-5   ${style.respensivepadding}`}
           onSubmit={handleSubmit(onSubmit)}
         >
+      <Goback/>
+
           <h1 className="h3 d-flex justify-content-center">Connexion</h1>
 
           <div className={`col-md-12 ${style.bordergreen}`}>

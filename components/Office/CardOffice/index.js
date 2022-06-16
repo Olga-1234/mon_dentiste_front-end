@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 const CardCabinet = ({className}) => {
   const Cabinets = useSelector((state) => state.Cabinet.cabinets);
-  console.log("les donnéées", Cabinets.name);
+  console.log("les donnéées", Cabinets);
 
   const dispatch = useDispatch();
 

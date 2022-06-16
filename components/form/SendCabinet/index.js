@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import * as yup from "yup";
 import { useRouter } from "next/router";
 import axios from "axios";
+ import config from "../../../config/index"
 
 const SendCabinet = () => {
   // const schema = yup
@@ -31,7 +32,7 @@ const SendCabinet = () => {
     try {
       console.log(localStorage.getItem("token"), "hfuehv -fehvhrg ");
       const response = await axios
-        .post("https://mon-dentiste-ok.herokuapp.com/api/cabinet", {...data}, {
+        .post(`${config.api}/cabinet`, {...data}, {
           headers: {
             "x-access-token": `${localStorage.getItem("token")}`,
           },

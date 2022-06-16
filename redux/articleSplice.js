@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import config from '../config';
+
 export const fetchArticle = createAsyncThunk("Article/fetch", async () => {
   try {
     
     const response = await axios.get(
-      "https://mon-dentiste-ok.herokuapp.com/api/article"
+      `${config.api}/article`
     );
     const data = await response.data;
     return data;

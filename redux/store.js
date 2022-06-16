@@ -2,7 +2,11 @@ import { configureStore } from "@reduxjs/toolkit";
 import Article from "./articleSplice"
 import Login from "./loginSplice"
 import Cabinet from "./cabinetSplice"
-import User from "./userSlice"
+import User from "./userSplice"
+import Appointment from "./appointmentSplice"
+
+
+
 
 export const store = configureStore({
     reducer:{
@@ -10,7 +14,7 @@ export const store = configureStore({
         Login,
         Cabinet,
         User,
-
+        Appointment
 
     }
 })

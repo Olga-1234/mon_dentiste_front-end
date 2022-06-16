@@ -6,6 +6,7 @@ import eye from "../assets/eye.svg";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import config from "../config/index"
 
 
 const Eye = <Image src={eye} width="" height="" />;
@@ -25,7 +26,7 @@ const inscription = () => {
     console.log("les information sur la connexion", data);
     try {
       const msg = await (
-        await axios.post("http://localhost:7000/api/auth/signUp", data)
+        await axios.post(`${config.api}/auth/signUp`, data)
       ).data;
       console.log("le message", msg.message);
       

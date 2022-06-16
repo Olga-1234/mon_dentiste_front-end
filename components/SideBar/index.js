@@ -1,16 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import style from "./style.module.css";
 
 const Dasbord = () => {
-  const [state, setState] = useState({});
+  const [state, setState] = useState({ roles: [] });
   useEffect(() => {
-    setState(JSON.parse(localStorage));
+    setState({ roles: localStorage.getItem("roles").split(",") });
+    console.log(localStorage.getItem("roles").split(","));
+    //  console.log(localStorage)
   }, []);
   return (
     <div className="position-relative">
       <div
-        className="d-flex flex-column position-fixed flex-shrink-0 p-3 text-white bg-dark"
+        className={`d-flex flex-column position-fixed flex-shrink-0 p-3 text-white ${style.bg} `}
         style={{ width: "280px", height: "100vh" }}
       >
         {state.roles.indexOf("admin") > -1 || (
@@ -25,8 +28,15 @@ const Dasbord = () => {
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
             <Link href="/AdminPage" passHref>
-              <a href="" className="nav-link active" aria-current="page">
-                Article
+              <a href="" className="nav-link text-white" aria-current="page">
+                Rendez-vous
+              </a>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link href="/AdminPage/articles" passHref>
+              <a href="" className="nav-link text-white" aria-current="page">
+                Articles
               </a>
             </Link>
           </li>
@@ -35,7 +45,7 @@ const Dasbord = () => {
               Dashboard
             </a>
           </li>
-          {localStorage.roles.indexOf("admin") > -1 && (
+          {state.roles.indexOf("admin") > -1 && (
             <li>
               <Link href="/AdminPage/cabinet" passHref>
                 <a className="nav-link text-white">Cabinet</a>
@@ -48,7 +58,7 @@ const Dasbord = () => {
               <a className="nav-link text-white">les Rendez-vous</a>
             </Link>
           </li>
-          {localStorage.roles.indexOf("admin") > -1 && (
+          {state.roles.indexOf("admin") > -1 && (
             <li>
               <Link href="/AdminPage/utilisateur" passHref>
                 <a className="nav-link text-white">

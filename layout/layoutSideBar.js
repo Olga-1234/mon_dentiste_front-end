@@ -8,7 +8,7 @@ const LayoutSideBar = ({ children, titre }) => {
       <Head>
         <title>{titre}</title>
       </Head>
-      <div className={" d-flex col-12 bg-light"}>
+      <div className={` d-flex col-12 bg-light ${style.responsivecard} `}>
         <div>
           <SideBar />
         </div>

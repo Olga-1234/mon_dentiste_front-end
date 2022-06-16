@@ -1,4 +1,4 @@
-import NavBar from "../components/navBar/navBar";
+import NavBar from "../components/navBar";
 import Head from "next/head";
 import AppointmentForm from "../components/Appointment/CardAppointment";
 import Title from "../components/title";

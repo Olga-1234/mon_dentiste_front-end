@@ -1,36 +1,23 @@
 {
-    "parserOptions": {
-      "ecmaVersion": 2019,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "plugins": [
-      "jest"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "eslint-config-prettier",
-      "next/babel"
-    ],
-    "rules": {
-      "strict": [ "error", "never"]
-    },
-    "overrides": [
+  "root": true,
+  "extends": ["next/core-web-vitals", "eslint:recommended", "next", "prettier"],
+  "plugins": ["testing-library"],
+  "overrides": [
+      // Only uses Testing Library lint rules in test files
       {
-        "files": [
-          "**/*.test.js",
-          "**/*.test.jsx",
-          "**/*.spec.js",
-          "**/*.spec.jsx"
-        ],
-        "env": {
-          "jest": true
-        }
+          "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+          "extends": ["plugin:testing-library/react"]
       }
-    ],
-    "env": {
-      "browser": true
-    }
+  ],
+  "rules": {
+      "no-unused-vars": "off",
+      "@next/next/no-img-element": "off",
+      "@next/next/no-html-link-for-pages": "warn",
+      "react/no-unescaped-entities": "warn",
+      "no-undef": "warn",
+      "@next/next/no-script-component-in-head": "warn",
+      "no-unreachable": "warn",
+      "import/no-anonymous-default-export": "off",
+      "react-hooks/rules-of-hooks": "warn"
   }
+}

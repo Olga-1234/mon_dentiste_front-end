@@ -3,7 +3,7 @@ import Head from "next/head";
 import CardCabinet from "../components/Office/CardOffice";
 import Office from "../components/Office/CardOffice";
 import Footer from "../components/footer";
-import NavBar from "../components/navBar/navBar";
+import NavBar from "../components/navBar";
 import Title from "../components/title";
 
 const trouver_un_dentiste = ({}) => {

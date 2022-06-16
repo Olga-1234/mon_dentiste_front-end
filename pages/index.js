@@ -5,7 +5,7 @@ import Carousel from "../components/Home/Carousel";
 import AboutUs from "../components/Home/AboutUs";
 import Footer from "../components/footer";
 import Services from "../components/Home/service";
-import NavBar from "../components/navBar/navBar";
+import NavBar from "../components/navBar";
 import style from "../styles/style.module.css";
 import Advice from "../components/Advice";
 
