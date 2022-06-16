@@ -10,7 +10,7 @@ const Goback = () => {
             }}
             role="button"
         >
-            <i class="bi bi-arrow-left"></i>
+            <i className="bi bi-arrow-left"></i>
         </div>
     );
 };

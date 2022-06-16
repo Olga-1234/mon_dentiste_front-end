@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
 import rdvdoctor from "../../../assets/rafiki.png";
 import Button from "../../button";
@@ -14,7 +15,6 @@ const CardAppointment = () => {
   const dispatch = useDispatch();
   useEffect(
     () => dispatch(fetchCabinet()),
-
     []
   );
   const {
@@ -54,7 +54,7 @@ const CardAppointment = () => {
     <div className="py-2 d-flex col-12 container pb-5">
       <div className="d-flex justify-content-center col-5  ">
         <div className={`  pt-5`}>
-          <Image src={rdvdoctor} height="" width="" />
+          <Image src={rdvdoctor}  alt="doctor" height="" width="" />
         </div>
       </div>
 
@@ -140,7 +140,7 @@ const CardAppointment = () => {
                 <option>...</option>
               </select>
             </div> */}
-            <div class="col-12 d-flex justify-content-center">
+            <div className="col-12 d-flex justify-content-center">
               <Button text="Envoyer" />
             </div>
           </form>

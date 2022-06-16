@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 import NavBar from "../components/navBar";
 import Title from "../components/title";
 
-const trouver_un_dentiste = ({}) => {
+const trouver_un_dentiste = () => {
   return (
     <div className=''>
       <NavBar />

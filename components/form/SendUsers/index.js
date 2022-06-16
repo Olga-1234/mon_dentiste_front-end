@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Button from "../../button";
 import style from "./style.module.css";
@@ -167,7 +168,7 @@ const SendUsers = () => {
         </div>
         
 
-        <div class="col-12 d-flex justify-content-center">
+        <div className="col-12 d-flex justify-content-center">
           <Button text="Envoyer" />
         </div>
       </form>

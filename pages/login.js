@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import style from "./../styles/login.module.css";
@@ -12,9 +13,9 @@ import Link from "next/link";
 import Goback from "../components/Goback";
 import config from "../config/index"
 
-const Eye = <Image src={eye} width="" height="" />;
+const Eye = <Image src={eye} alt="eye" width="" height="" />;
 
-const login = ({ email, passsword }) => {
+const Login = ({ email, passsword }) => {
   const router = useRouter();
 
   const [passwordShown, setPasswordShown] = useState(false);
@@ -69,7 +70,7 @@ const login = ({ email, passsword }) => {
     <div className="d-flex col">
       {/* <NavBar /> */}
       <div
-        className={`d-flex col-6 justify-content-center align-items-center ${style.login}`}
+        className={`d-flex col-6 justify-content-center align-items-center ${style.Login}`}
       >
 
         <form
@@ -131,4 +132,4 @@ const login = ({ email, passsword }) => {
   );
 };
 
-export default login;
+export default Login;

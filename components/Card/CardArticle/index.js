@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
 import Child from "../../../assets/enfantQuiBrosseDent.jpeg";
 import style from "./style.module.css";
@@ -29,6 +30,7 @@ const CardArticle = () => {
           >
             <Image
               src={Child}
+              alt="child"
               width=""
               height=""
               className={`col-lg-4  img-fluid py-xs-4`}

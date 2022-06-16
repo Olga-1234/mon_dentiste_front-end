@@ -9,7 +9,7 @@ const CardAbout = () => {
       <div className="pt-3   ">
         <div className="d-flex px-5  justify-content-end">
           <div className={`col-2 pt-5`}>
-            <Image src={cuate} height="" width="" />
+            <Image src={cuate} alt="cuate" height="" width="" />
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@ const CardAbout = () => {
       </div>
       <div className="d-flex  justify-content-around">
         <div className="">
-          <Image src={About} height="200" width="200" />
+          <Image src={About} height="200" alt="about" width="200" />
         </div>
         <div className="d-flex align-items-center">
           <p>

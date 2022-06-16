@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import Button from "../components/button";
@@ -9,7 +10,7 @@ import axios from "axios";
 import config from "../config/index"
 
 
-const Eye = <Image src={eye} width="" height="" />;
+const Eye = <Image src={eye} alt="l'oeil" width="" height="" />;
 
 const inscription = () => {
     const router = useRouter()
@@ -137,7 +138,7 @@ const inscription = () => {
         </div>
         
 
-        <div class="col-12 d-flex justify-content-center">
+        <div className="col-12 d-flex justify-content-center">
           <Button text="Envoyer" />
         </div>
       </form>

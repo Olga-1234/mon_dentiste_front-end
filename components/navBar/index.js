@@ -14,7 +14,7 @@ const NavBar = () => {
           Mon Dentiste
         </a>
         <input className={`${style.menubtn} `} type="checkbox" id="menu-btn" />
-        <label className={`${style.menuicon}`} for="menu-btn">
+        <label className={`${style.menuicon}`} htmlFor="menu-btn">
           <span className={`${style.navicon}`}></span>
         </label>
         <ul className={`${style.menu} `}>

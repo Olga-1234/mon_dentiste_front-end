@@ -99,7 +99,7 @@ const SendArticle = () => {
             {...register("Name", { required: true })}
           />
         </div>
-        <div class="col-12 d-flex justify-content-center">
+        <div className="col-12 d-flex justify-content-center">
           <Button text="Envoyer" />
         </div>
       </form>
