@@ -16,8 +16,10 @@ const TableCabinets = () => {
     );
 
     return (
-     <div className="col-10">
-       <table className="table table-success  table-striped">
+      <div className="d-flex col-12 justify-content-center py-5">
+                <div className="table-responsive col-sm-9 col-12">
+
+      <table className="table table-success  table-striped">
   <thead>
     <tr>
       <th scope="col"></th>
@@ -56,7 +58,7 @@ const TableCabinets = () => {
 ))}
   </tbody>
 </table>
-
+</div>
      </div>
     )
 }

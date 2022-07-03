@@ -52,13 +52,13 @@ const CardAppointment = () => {
 
   return (
     <div className="py-2 d-flex col-12 container pb-5">
-      <div className="d-flex justify-content-center col-5  ">
+      <div className={`${style.dNone} d-flex justify-content-center col-5  `}>
         <div className={`  pt-5`}>
           <Image src={rdvdoctor}  alt="doctor" height="" width="" />
         </div>
       </div>
 
-      <div className="pt-2 d-flex col-7 justify-content-center">
+      <div className="pt-2 d-flex col-12 col-sm-7 justify-content-center">
         <div
           className={` py-4 ${style.boxshadow} d-flex justify-content-center`}
         >

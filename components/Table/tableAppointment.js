@@ -14,14 +14,17 @@ const TableAppointment = () => {
     []
   );
   return (
-    <div className="col-10">
-      <table className="table table-success  table-striped">
+    <div className="d-flex col-12 justify-content-center">
+        <div class="table-responsive col-12 col-sm-10">
+        <table class="table table-striped table-sm ">
         <thead>
           <tr>
             <th scope="col"></th>
-            <th scope="col">Titre</th>
-            <th scope="col">Description</th>
-            <th scope="col">Auteur</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date</th>
+            <th scope="col">Heure</th>
+
           </tr>
         </thead>
 
@@ -31,11 +34,14 @@ const TableAppointment = () => {
               <th scope="row">{index + 1}</th>
               <td>{Appointment.name}</td>
               <td>{Appointment.email}</td>
+              <td>{Appointment.date}</td>
               <td>{Appointment.time}</td>
+
             </tr>
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

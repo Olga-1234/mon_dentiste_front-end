@@ -8,11 +8,11 @@ const LayoutSideBar = ({ children, titre }) => {
       <Head>
         <title>{titre}</title>
       </Head>
-      <div className={` d-flex col-12 bg-light ${style.responsivecard} `}>
-        <div>
+      <div className={`  `}>
+        <div className="col-3">
           <SideBar />
         </div>
-        <div className={`${style.ml280px}`}>{children}</div>
+        <div className={`${style.ml280px} col-11`}>{children}</div>
       </div>
     </div>
   );

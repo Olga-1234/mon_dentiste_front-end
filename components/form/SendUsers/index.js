@@ -12,22 +12,41 @@ import axios from "axios";
 import Layout from "../../../layout/layoutSideBar"
 import config from "../../../config/index"
 
-const SendUsers = () => {
-  // const schema = yup
-  //   .object()
-  //   .shape({
-  //     name: yup.string().required("name is required"),
-  //     title: yup.string().required("Title is required"),
-  //     picture: yup.string(),
-  //     description: yup.string().required("description is required"),
-  //   })
-  //   .required();
 
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm({ mode: "onSubmit" });
+const SendUsers = () => {
+  const validationSchema = yup.object().shape({
+    title: yup.string()
+        .required('Title is required'),
+        userName: yup.string()
+        .required('First Name is required'),
+    lastName: yup.string()
+        .required('Last name is required'),
+    dob: yup.string()
+        .required('Date of Birth is required')
+        .matches(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/, 'Date of Birth must be a valid date in the format YYYY-MM-DD'),
+    email: yup.string()
+        .required('Email is required')
+        .email('Email is invalid'),
+    password: yup.string()
+        .min(6, 'Password must be at least 6 characters')
+        .required('Password is required'),
+    confirmPassword: yup.string()
+        .oneOf([yup.ref('password'), null], 'Passwords must match')
+        .required('Confirm Password is required'),
+    acceptTerms: yup.bool()
+        .oneOf([true], 'Accept Ts & Cs is required')
+});
+const formOptions = { resolver: yupResolver(validationSchema) };
+
+
+  // const {
+  //   register,
+  //   formState: { errors },
+  //   handleSubmit,
+  // } = useForm({ mode: "onSubmit" });
+
+  const { register, handleSubmit, reset, formState } = useForm(formOptions);
+  const { errors } = formState;
 
   const onSubmit = async (data) => {
     console.log("les informat", data);
@@ -53,29 +72,29 @@ const SendUsers = () => {
   return (
     
 
-<div className="col-12">
-<h1 className="h4 d-flex border justify-content-center"> Formulaire D'enregistrements des utilisateurs</h1>
-
-<div className="col-12 d-flex justify-content-center py-5">
+<div className=" col-12 ">
+<h1 className="h4 d-flex  justify-content-center"> Formulaire D'enregistrements des utilisateurs</h1>
+<div className=" d-flex justify-content-center py-5">
       <form
         className={`col-lg-8 row g-4  ${style.respensivepadding}`}
         onSubmit={handleSubmit(onSubmit)}
       >
-
-        <div className="col-md-12">
+  
+        <div className=" form-group col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light form-control ${errors.userName ? 'is-invalid' : ''} ${style.bordergreen}`}
             id="inputuserName"
             placeholder="Nom"
             name="userName"
             {...register("userName", { required: true })}
           />
+          <div className="invalid-feedback">{errors.userName?.message}</div>
         </div>
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="inputuserfirstName"
             placeholder="Prenom"
             name="userfirstName"
@@ -86,18 +105,19 @@ const SendUsers = () => {
         <div className="col-md-12">
           <input
             type="email"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="email"
             placeholder="email"
             name="email"
             {...register("email", { required: true })}
           />
+
         </div>
 
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="inputaddress"
             placeholder="Adresse"
             name="address"
@@ -108,7 +128,7 @@ const SendUsers = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="sexe"
             placeholder="sexe"
             name="sexe"
@@ -118,7 +138,7 @@ const SendUsers = () => {
         <div className="col-md-12">
           <input
             type="date"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="birthdate"
             placeholder="Date de Naissance"
             name="birthdate"
@@ -128,7 +148,7 @@ const SendUsers = () => {
         <div className="col-md-12">
           <input
             type="number"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="tel"
             placeholder="Téléphone"
             name="tel"
@@ -138,7 +158,7 @@ const SendUsers = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="cabinets"
             placeholder="cabinets"
             name="cabinets"
@@ -148,7 +168,7 @@ const SendUsers = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="role"
             placeholder="role"
             name="roles"
@@ -159,7 +179,7 @@ const SendUsers = () => {
         <div className="col-md-12">
           <input
             type="password"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="password"
             placeholder="mot de passe"
             name="password"

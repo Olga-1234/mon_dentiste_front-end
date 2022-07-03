@@ -51,8 +51,10 @@ const SendCabinet = () => {
   return (
     
 
-<div className="col-12">
-<h1 className="h4 d-flex border justify-content-center"> Formulaire D'enregistrements des Cabinets</h1>
+<div className={`col-lg-8 row pb-5 g-4 ${style.boxshadow} ${style.respensivepadding}`}
+>
+
+<h1 className="h4 d-flex  justify-content-center"> Formulaire D'enregistrements des Cabinets</h1>
 
 <div className="col-12 d-flex justify-content-center py-5">
       <form
@@ -63,7 +65,7 @@ const SendCabinet = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="inputname"
             placeholder="Nom"
             name="name"
@@ -73,7 +75,7 @@ const SendCabinet = () => {
         <div className="col-md-12">
           <input
             type="email"
-            className={`col-12 py-2 ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="inputemail"
             placeholder="Email"
             name="email"
@@ -84,7 +86,7 @@ const SendCabinet = () => {
         <div className="col-md-12">
           <input
             type="textT"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="openTime"
             placeholder="heure d'ouverture"
             name="openTime"
@@ -95,7 +97,7 @@ const SendCabinet = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="closureTime"
             placeholder="Heure de fermeture"
             name="closureTime"
@@ -106,7 +108,7 @@ const SendCabinet = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="phone"
             placeholder="Téléphone"
             name="phone"
@@ -116,7 +118,7 @@ const SendCabinet = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="city"
             placeholder="Ville"
             name="city"
@@ -126,7 +128,7 @@ const SendCabinet = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="address"
             placeholder="Adresse"
             name="address"
@@ -136,7 +138,7 @@ const SendCabinet = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="service"
             placeholder="Services"
             name="service"
@@ -150,7 +152,7 @@ const SendCabinet = () => {
         <div className="col-md-12">
           <textarea
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="Description"
             placeholder="Description"
             name="Description"

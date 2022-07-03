@@ -48,7 +48,7 @@ const SendArticle = () => {
 
   return (
       <form
-        className={`col-lg-8 row pb-5 g-4 ${style.respensivepadding}`}
+        className={`col-lg-8 row pb-5 g-4 ${style.boxshadow} ${style.respensivepadding}`}
         onSubmit={handleSubmit(onSubmit)}
       >
         <h1 className="h4 d-flex justify-content-center">
@@ -59,7 +59,7 @@ const SendArticle = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="inputtitle"
             placeholder="Titre"
             name="title"
@@ -69,7 +69,7 @@ const SendArticle = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="inputdescription"
             placeholder="Description"
             name="description"
@@ -81,7 +81,7 @@ const SendArticle = () => {
         <div className="col-md-12">
           <input
             type="file"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="picture"
             placeholder="Photo"
             name="picture"
@@ -92,7 +92,7 @@ const SendArticle = () => {
         <div className="col-md-12">
           <input
             type="text"
-            className={`col-12 py-2 ${style.colorgrid}  ${style.bordergreen}`}
+            className={`col-12 py-2 bg-light ${style.bordergreen}`}
             id="name"
             placeholder="Nom"
             name="Name"

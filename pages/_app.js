@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
-/* eslint-disable @next/next/no-page-custom-font */
-/* eslint-disable no-unused-vars */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -8,6 +5,8 @@ import { Provider } from 'react-redux';
 import { store } from '../redux/store';
 import Head from 'next/head';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import "react-pro-sidebar/dist/css/styles.css";
+
 
 const MyApp = ({ Component, pageProps }) => {
     return (
