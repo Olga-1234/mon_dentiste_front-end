@@ -14,10 +14,15 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
-    "/AdminPage/cabinet": [
+    "/AdminPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/AdminPage/cabinet.js"
+      "static/chunks/pages/AdminPage.js"
+    ],
+    "/AdminPage/articles": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/AdminPage/articles.js"
     ],
     "/AdminPage/utilisateur": [
       "static/chunks/webpack.js",

@@ -3,5 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/AdminPage/utilisateur": "pages/AdminPage/utilisateur.js",
-  "/AdminPage/cabinet": "pages/AdminPage/cabinet.js"
+  "/AdminPage": "pages/AdminPage.js",
+  "/AdminPage/articles": "pages/AdminPage/articles.js"
 }

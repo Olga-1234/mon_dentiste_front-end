@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUser } from '../../redux';
 import { useEffect } from 'react';
+import style from "./style.module.css"
 
 const TableUsers = () => {
     const Users = useSelector((state) => state.User.users);
@@ -16,8 +17,8 @@ const TableUsers = () => {
 
     return (
       // <h2>Section title</h2>
-    <div className="d-flex col-12 justify-content-center">
-        <div className="table-responsive col-sm-9 col-12">
+    <div className={`  d-flex col-12 justify-content-center`}>
+        <div className={`table-responsive col-sm-9 ${style.respensivepadding} col-12`}>
         <table className="table table-striped table-sm ">
         <thead>
                     <tr>
@@ -26,7 +27,6 @@ const TableUsers = () => {
                  <th scope="col">PreNom</th>
                  <th scope="col">Email</th>
                  <th scope="col">Adresse</th>
-
                  <th scope="col">Téléphone</th>
                  <th scope="col">roles</th>
                  <th scope="col">sexe</th>
